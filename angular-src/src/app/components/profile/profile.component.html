@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <br>
+  <flash-messages></flash-messages>
+ 
+</div>
+<div class="container">
+<section  class="sc">
+
+
+    <div class="col-sm-12 col-xs-12 col-lg-12 col-xl-12 col-md-12">
+<section class="box has-border-left-3">
+    <header class="panel_header">
+        <h2 class="title pull-left">Profile</h2>
+        <div class="actions panel_actions pull-right">
+        	
+            <a class="box_toggle fa fa-chevron-down"></a>
+            <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+            <a class="box_close fa fa-times"></a>
+        </div>
+       
+    </header>
+    <div class="content-body">
+        <div class="row">
+            <div class="col-sm-12 col-xs-12 col-lg-12 col-xl-12 col-md-12">
+                <div class="transfer-wraper">
+                    <div class="form-group no-mb">
+                    
+					<div *ngIf="user">
+						
+						<ul class="list-group">
+						<li class="list-group-item">Name: {{user.name}}</li>
+						<li class="list-group-item">Username: {{user.username}}</li>
+						<li class="list-group-item">Email: {{user.email}}</li>
+						</ul>
+					</div>
+                        <label class="form-label">Metamask or Mist or Ethereum wallet address</label>
+                        <div class="input-group mb-10">
+
+                            <span class="input-group-addon has-gradient-to-right-bottom">
+                                    <i class='cc ETH-alt icon-white'></i>   
+                                </span>
+                            <p class="form-control-static with-border">{{waddr}}</p>
+                             <a  id="paddrteletool" class="input-group-addon" data-color-class="primary" data-animate=" animated fadeIn" data-toggle="tooltip" data-original-title="copy" data-placement="top"><i class="fa fa-copy text-dark"></i></a><span id="paddrspan" data-toggle="tooltip1" data-placement="left"  title="copied"><input type="text" value="{{waddr}}" id="paddrteletext" style="display:none;"></span>
+                        </div>
+
+                       
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+        </section>
+    </div>
+</section>
+</div>

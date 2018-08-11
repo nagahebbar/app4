@@ -1,0 +1,414 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <br>
+  <flash-messages></flash-messages>
+ 
+</div>
+<div class="container" >
+ <div class="row">
+    <div  #caddr style="display:none;"> {{contractdetails?.caddr}}</div>
+     <div  #cabi style="display:none;"> {{contractdetails?.cabi}}</div>
+     <div  #net style="display:none;"> {{contractdetails?.net}}</div>
+    <!--<button #btnc type="submit" (click)="onChange(caddr.innerText, cabi.innerText, net.innerText)" style="display:none;">Load Contract</button>-->
+</div>
+<h2 class="page-header">Dashboard</h2>
+<p>Welcome to craft melon dashboard! (Refersh this page)<span (click)="refresh()"> <img src="./assets/data/icons/refresh.png" class="ico-icon-o" style="width:20px; height:20px; cursor: pointer;" alt=""></span></p>
+
+
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<section class="box nobox marginBottom0">
+    <div class="content-body">
+        <div class="row">
+            <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12">
+                <div class="r4_counter db_box has-gradient-to-right-bottom">
+                    <div class="icon-after cisize1">
+                        <img src="./assets/images/logo-folded1.png" alt="">
+                    </div>
+                    <i class='pull-left ico-icon icon-md icon-primary mt-10 cisize' >
+                        <img src="./assets/images/logo-folded1.png" class="ico-icon-o" alt="">
+                        <img src="./assets/images/logo-folded1.png" class="ico-icon-w" alt="">
+                    </i>
+                    <div class="stats">
+                        <h3 class="color-white mb-5"><span>{{balance}}</span>
+                          C</h3>
+                        <span>My Wallet (Craft Tokens) Balance</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="r4_counter db_box has-gradient-to-right-bottom">
+                    <div class="icon-after wisize1">
+                        <img src="./assets/data/icons/wallet-o.png" alt="">
+                    </div>
+                    <i class='pull-left ico-icon icon-md icon-primary mt-10 wisize' >
+                        <img src="./assets/data/icons/wallet-o1.png" class="ico-icon-o" alt="">
+                        <img src="./assets/data/icons/wallet-o1.png" class="ico-icon-w" alt="">
+                    </i>
+                    <div class="stats">
+                        <h3 class="color-white mb-5">{{balanceme}} Ether</h3>
+                        <span>My Wallet Balance </span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+           
+
+        </div>
+    </div>
+</section>
+</div>
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<section class="box nobox marginBottom0">
+    <div class="content-body">
+        <div class="row">
+            
+             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="r4_counter db_box">
+                    <div class="icon-after ">
+                        <img src="./assets/data/icons/cryptonia-ico-lg.png" alt="">
+                    </div>
+                    <i class='pull-left ico-icon icon-md icon-primary mt-10 ' >
+                        <img src="./assets/data/icons/cryptonia-ico-so.png" class="ico-icon-o" alt="">
+                        <img src="./assets/data/icons/cryptonia-ico-sw.png" class="ico-icon-w" alt="">
+                    </i>
+                    <div class="stats">
+                        <h3 class="mb-5">{{initialtotalsupply}} C</h3>
+                        <span>Total Craft tokens</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="r4_counter db_box">
+                    <div class="icon-after ">
+                        <img src="./assets/data/icons/cryptonia-ico-lg.png" alt="">
+                    </div>
+                    <i class='pull-left ico-icon icon-md icon-primary mt-10 ' >
+                        <img src="./assets/data/icons/cryptonia-ico-so.png" class="ico-icon-o" alt="">
+                        <img src="./assets/data/icons/cryptonia-ico-sw.png" class="ico-icon-w" alt="">
+                    </i>
+                    <div class="stats">
+                        <h3 class="mb-5">{{ ConvertToInt(initialtotalsupply)   - ConvertToInt(balanceo) }} C</h3>
+                        <span>Craft tokens purchased</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="r4_counter db_box">
+                    <div class="icon-after ">
+                        <img src="./assets/data/icons/cryptonia-ico-lg.png" alt="">
+                    </div>
+                    <i class='pull-left ico-icon icon-md icon-primary mt-10 ' >
+                        <img src="./assets/data/icons/cryptonia-ico-so.png" class="ico-icon-o" alt="">
+                        <img src="./assets/data/icons/cryptonia-ico-sw.png" class="ico-icon-w" alt="">
+                    </i>
+                    <div class="stats">
+                        <h3 class="mb-5">{{balanceo}} C</h3>
+                        <span>Pending Craft tokens</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+</div>
+
+<div *ngIf="show">
+ <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12">
+    <section class="box has-border-left-3">
+        <header class="panel_header">
+            <h2 class="title pull-left">Approve account before purchasing tokens</h2>
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+
+        <div class="content-body">    
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <form #formCtrl="ngForm" (ngSubmit)="approveWallet()"  [formGroup]="formapprov">
+                    <div class="transfer-wraper">
+                        <div class="form-group no-mb">
+                            <label class="form-label">Amount</label>
+                            <span class="desc">minimum value "0.001 Ether" (0.000433 Eth = 1C = 0.2$)</span>
+
+                            <div class="input-group mb-10">
+                                <span class="input-group-addon">C</span>
+                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)] = "balanceo"  formControlName="youramta"  value="{{balanceo}}" required>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-red " >
+                                        Token 
+                                    </button>
+
+                                   
+                                </div>
+
+                            </div>
+
+                            <label class="form-label">wallet address</label>
+                            <span class="desc"></span>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <span class="arrow"></span>
+                                    <img src="./assets/data/icons/wallet-o.png" alt="icon">    
+                                </span>
+                                <input type="text" class="form-control" [(ngModel)] = "waddr" formControlName="yourwaddra" value="{{waddr}}" required >
+                            </div>
+
+                           
+
+                            <button class="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom" style="width:100%">Approve Account</button>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</div>
+
+ <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+    <section class="box has-border-left-3">
+        <header class="panel_header">
+            <h2 class="title pull-left">Buy more Tokens</h2>
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+
+        <div class="content-body">    
+            <div class="row">
+                <div class="col-xs-12">
+                    <form #formCtrl="ngForm" (ngSubmit)="purchaceTokens()"  [formGroup]="formpurch">
+                    <div class="transfer-wraper">
+                        <div class="form-group no-mb">
+                            <label class="form-label">Amount</label>
+                            <span class="desc">minimum value "0.001 Ether" (0.000464 Eth = 1C)</span>
+
+                            <div class="input-group mb-10">
+                                <span class="input-group-addon">C</span>
+                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)] = "youramtp" placeholder="enter amount" formControlName="youramtp"  required>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-red " >
+                                       Token 
+                                    </button>
+
+                                   
+                                </div>
+
+                            </div>
+
+                            <label class="form-label">wallet address</label>
+                            <span class="desc"></span>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <span class="arrow"></span>
+                                    <img src="./assets/data/icons/wallet-o.png" alt="icon">    
+                                </span>
+                                <input type="text" class="form-control" [(ngModel)] = "waddr" value="{{waddr}}"  formControlName="yourwaddrp" required [readonly]="true">
+                            </div>
+
+                           
+
+                            <button class="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom" style="width:100%" [disabled]="!formpurch.valid">Buy More Tokens</button>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+<section class="box has-border-left-3">
+        <header class="panel_header">
+            <h2 class="title pull-left">Present ICO Details</h2>
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+        <div class="content-body">    
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="price-pack no-mt no-mb">
+                        <div class="head bg-accent">
+                            <h4>ICO Stage 1</h4>
+                        </div>  
+
+                        <ul class="item-list list-unstyled" style="padding: 20px 15px 10px;">
+                            <li>Rate: <strong> {{icodetail?.rate}} </strong></li>
+                            <li>Starting Date: <strong> {{icodetail?.icostartdate}} </strong>&nbsp;&nbsp;&nbsp;&nbsp;Ending Date: <strong> {{icodetail?.icoenddate}} </strong></li>
+                            <li>Soft Cap: <strong> {{icodetail?.softcap}}</strong>&nbsp;&nbsp;&nbsp;&nbsp;Hard Cap:<strong> {{icodetail?.hardcap}}</strong></li>
+                            
+                        </ul>
+                       <!-- <input autofocus type="text"  [(ngModel)] = "contractaddr" value="{{contractdetails?.caddr}}" #device > {{contractaddr}}-->
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+</section>
+</div>
+
+<div *ngIf="show">
+
+<div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12">
+    <section class="box has-border-left-3">
+        <header class="panel_header">
+            <h2 class="title pull-left">Transfer Tokens (only from owner to others)</h2>
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+
+        <div class="content-body">    
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <form #formCtrl="ngForm" (ngSubmit)="transactionFT()"  [formGroup]="formtrans">
+                    <div class="transfer-wraper">
+                        <div class="form-group no-mb">
+                            <label class="form-label">Amount</label>
+                            <span class="desc">minimum value "0.001 Ether"</span>
+
+                            <div class="input-group mb-10">
+                                <span class="input-group-addon">C</span>
+                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)] = "youramt" placeholder="enter amount" formControlName="youramt"  required>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-red " >
+                                        Token
+                                    </button>
+
+                                   
+                                </div>
+
+                            </div>
+
+                            <label class="form-label">wallet address</label>
+                            <span class="desc"></span>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <span class="arrow"></span>
+                                    <img src="./assets/data/icons/wallet-o.png" alt="icon">    
+                                </span>
+                                <input type="text" class="form-control" [(ngModel)] = "yourwaddr" placeholder="OxsD12F32xvW3deG5..." formControlName="yourwaddr" required>
+                            </div>
+
+                            <button class="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom" style="width:100%" [disabled]="!formtrans.valid">Send Tokens</button>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>
+
+<!--<div class="col-lg-12">
+    <section class="box has-border-left-3">
+        <header class="panel_header">
+            <h2 class="title pull-left">Transfer ether from contract to owner</h2>
+            <div class="actions panel_actions pull-right">
+                <a class="box_toggle fa fa-chevron-down"></a>
+                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                <a class="box_close fa fa-times"></a>
+            </div>
+        </header>
+
+        <div class="content-body">    
+            <div class="row">
+                <div class="col-xs-12">
+                    <form #formCtrl="ngForm" (ngSubmit)="transactionFTfromto()"  [formGroup]="formtranstft">
+                    <div class="transfer-wraper">
+                        <div class="form-group no-mb">
+                            <label class="form-label">Amount</label>
+                            <span class="desc">minimum value "0.001 Ether"</span>
+
+                            <div class="input-group mb-10">
+                                <span class="input-group-addon">ETH</span>
+                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)] = "youramttft" placeholder="enter amount" formControlName="youramttft"  required>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-red " >
+                                       Ether
+                                    </button>
+
+                                   
+                                </div>
+
+                            </div>
+
+                            <label class="form-label">From address</label>
+                            <span class="desc"></span>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <span class="arrow"></span>
+                                    <img src="./assets/data/icons/wallet-o.png" alt="icon">    
+                                </span>
+                                <input type="text" class="form-control" [(ngModel)] = "yourfromwaddrtft" placeholder="OxsD12F32xvW3deG5..." formControlName="yourfromwaddrtft" required>
+                            </div>
+
+                             <label class="form-label">To address</label>
+                            <span class="desc"></span>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <span class="arrow"></span>
+                                    <img src="./assets/data/icons/wallet-o.png" alt="icon">    
+                                </span>
+                                <input type="text" class="form-control" [(ngModel)] = "yourtowaddrtft" placeholder="OxsD12F32xvW3deG5..." formControlName="yourtowaddrtft" required>
+                            </div>
+
+                            <button class="btn btn-primary btn-lg mt-20 has-gradient-to-right-bottom" style="width:100%" [disabled]="!formtranstft.valid">Send Ether</button>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+</div>-->
+
+
+</div>

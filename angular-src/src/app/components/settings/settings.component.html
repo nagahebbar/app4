@@ -1,0 +1,437 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <br>
+  <flash-messages></flash-messages>
+ 
+</div>
+<div class="container">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <section class="box has-border-left-3">
+            <header class="panel_header">
+                <h2 class="title pull-left">General Settings</h2>
+            </header>
+            <div class="content-body">    
+                <div class="row">
+                    <div class="form-container">
+                        <form  [formGroup]="profileForm" (ngSubmit)="onGeneralSettingsSubmit(profileForm)" >
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="col-lg-6 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Name</label>
+                                            <span class="desc">e.g. "If it is not you, Please let us know"</span>
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="name1" value="{{user?.name}}">
+                                                 <input type="text" formControlName="id" value="{{user?._id}}" class="form-control" style="display:none;">
+                                                <label *ngIf="profileForm.get('name1').invalid " [ngClass] = "'error'"> Name is required. </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Email</label>
+                                            <span class="desc">e.g. "some@example.com"</span>
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control"formControlName="email1" value="{{user?.email}}">
+                                                <label *ngIf="profileForm.get('email1').invalid " [ngClass] = "'error'"> Email is required. </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <div class="col-xs-12">
+                                    <div formGroupName="password">
+                                    <div class="col-lg-6 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Password </label>
+                                            <span class="desc">e.g. "lorem123"</span>
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="password" class="form-control" formControlName="passd1" >
+                                                <label *ngIf="profileForm.get('password').invalid" [ngClass] = "'error'"> Enter Valid Password. </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Confirm Password</label>
+                                            <span class="desc">e.g. "lorem123"</span>
+                                           <div class="controls">
+                                                <i class=""></i>
+                                                <input type="password" class="form-control" formControlName="passd2" >
+                                                <label *ngIf="profileForm.get('password').invalid" [ngClass] = "'error'"> Enter Valid Password. </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                                 <div class="col-xs-12">
+                                    <div class="form-group">
+                                    <div class="pull-left">
+                                        <h4><i class="fa fa-info-circle color-primary complete f-s-14"></i><small>Note that password must be atleast 7 characters long and maximum 15 character and contains atleast one capital and one small alphabet.</small></h4>
+                                       
+                                    </div>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button type="submit" class="btn btn-primary btn-corner right15" [disabled]="!profileForm.valid"><i class="fa fa-check"></i> Update</button>
+                                        <button type="button" class="btn btn-default btn-corner"><i class="fa fa-times"></i></button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+   
+    <div *ngIf="show">
+   
+     <section class="box has-border-left-3">
+            <header class="panel_header">
+                <h2 class="title pull-left">ICO Details</h2>
+            </header>
+            <div class="content-body">    
+                <div class="row">
+                    <div class="form-container">
+                        <form [formGroup]="icoForm" (ngSubmit)="onICOSubmit(icoForm)">
+
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Token Name</label>
+                                           
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="tn"  value="{{icodetail?.tn}}" >
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Token Symbol</label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="ts" value="{{icodetail?.ts}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Decimal </label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="decimal" value="{{icodetail?.decimal}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Rate </label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="rate" value="{{icodetail?.rate}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Pre ICO Start Date </label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="preicostartdate" value="{{icodetail?.preicostartdate}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Pre ICO End Date</label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="preicoenddate" value="{{icodetail?.preicoenddate}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">ICO Start Date </label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="icostartdate" value="{{icodetail?.icostartdate}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">ICO End Date</label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="icoenddate" value="{{icodetail?.icoenddate}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Soft Cap </label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="softcap" value="{{icodetail?.softcap}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Hard Cap</label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="hardcap" value="{{icodetail?.hardcap}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Timer End Date</label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="timerenddate" value="{{icodetail?.timerenddate}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                     <div class="input-group mb-10">
+                                    
+                                    <div class="form-group">
+                                            <label class="form-label">Total Supply</label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="totalsupply" value="{{icodetail?.totalsupply}}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <div class="input-group mb-10">
+                                    
+                                    <div class="form-group">
+                                            <label class="form-label">Owner Wallet Address</label>
+                                            
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="ownerwa" value="{{icodetail?.ownerwa}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">
+
+                                         <input type="text" formControlName="id" value="{{icodetail?.id}}" class="form-control" style="display:none;">
+
+                                        <button type="submit"  class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Update</button>
+                                        <button type="button" class="btn btn-default btn-corner"><i class="fa fa-times"></i></button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    </section>
+</div>
+
+
+ <div *ngIf="show">
+   
+     <section class="box has-border-left-3">
+            <header class="panel_header">
+                <h2 class="title pull-left">Home Page Details</h2>
+            </header>
+            <div class="content-body">    
+                <div class="row">
+                    <div class="form-container">
+                        <form [formGroup]="homeForm" (ngSubmit)="onHPSubmit(homeForm)">
+
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">About Us</label>
+                                           
+                                           <div class="controls">
+                                            <textarea class="form-control" formControlName="aus" value="{{hdetails?.aus}}"></textarea>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Contact Us</label>
+                                            
+                                            <div class="controls">
+                                            <textarea class="form-control" formControlName="cus" value="{{hdetails?.cus}}"></textarea>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Facebook </label>
+                                             <span class="desc">e.g. "If it is not link, Please add "#"</span>
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="facebk" value="{{hdetails?.facebk}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Linked In</label>
+                                              <span class="desc">e.g. "If it is not link, Please add "#"</span>
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="ln" value="{{hdetails?.ln}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 no-pl">
+                                        <div class="form-group">
+                                            <label class="form-label">Twitter </label>
+                                              <span class="desc">e.g. "If it is not link, Please add "#"</span>
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="twitter" value="{{hdetails?.twitter}}">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 no-pr">
+                                        <div class="form-group">
+                                            <label class="form-label">Youtube </label>
+                                              <span class="desc">e.g. "If it is not link, Please add "#"</span>
+                                            <div class="controls">
+                                                <i class=""></i>
+                                                <input type="text" class="form-control" formControlName="gplus" value="{{hdetails?.gplus}}">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">
+                                         <input type="text" formControlName="id" value="{{hdetails?.id}}" class="form-control" style="display:none;">
+                                        <button type="submit"  class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Update</button>
+                                        <button type="button" class="btn btn-default btn-corner"><i class="fa fa-times"></i></button>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    </section>
+</div>
+
+<div *ngIf="show">
+   
+     <section class="box has-border-left-3">
+            <header class="panel_header">
+                <h2 class="title pull-left">Contract Details</h2>
+            </header>
+            <div class="content-body">    
+                <div class="row">
+                    <div class="form-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <form [formGroup]="contractForm" (ngSubmit)="onContractSubmit(contractForm)">
+
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="form-group">
+                                            <label class="form-label">Contract Address</label>
+                                           
+                                           <div class="controls">
+                                            <textarea class="form-control" formControlName="caddr" value="{{contractdetails?.caddr}}"></textarea>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="form-group">
+                                            <label class="form-label">Contact ABI</label>
+                                            
+                                            <div class="controls">
+                                            <textarea class="form-control" formControlName="cabi" value="{{contractdetails?.cabi}}"></textarea>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                                        <div class="form-group">
+                                            <label class="form-label">Network</label>
+                                            
+                                            <div class="controls">
+                                            <textarea class="form-control" formControlName="net" value="{{contractdetails?.net}}"></textarea>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                     <div class="pull-right">
+                                         <input type="text" formControlName="id" value="{{contractdetails?.id}}" class="form-control" style="display:none;">
+                                        <button type="submit"  class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Update</button>
+                                        <button type="button" class="btn btn-default btn-corner"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+    </section>
+</div>
+
+
+</div>
+
+
+ <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <section class="box has-border-left-3">
+            <header class="panel_header">
+                <h2 class="title pull-left">My Wallet Address</h2>
+            </header>
+            <div class="content-body">    
+                <div class="row">
+                    <div class="form-container">
+                        <form [formGroup]="waForm" (ngSubmit)="onWalletSubmit(waForm)">
+                        <label class="form-label">Metamask or Mist or Ethereum wallet address</label>
+                        <div class="input-group mb-10">
+                            <span class="input-group-addon has-gradient-to-right-bottom">
+                                    <i class='cc ETH-alt icon-white'></i>   
+                                </span>
+                            <p ></p>
+
+                            <input type="text" class="form-control-static with-border form-control" formControlName="walletaddr" value="{{waddr?.walletaddr}}">
+                             <input type="text" formControlName="id" value="{{waddr?.userid}}" class="form-control" style="display:none;">
+                              <input type="text" formControlName="userid" value="{{waddr?.userid}}" class="form-control" style="display:none;">
+                                           
+                            <a  id="saddrteletool" class="input-group-addon" data-color-class="primary" data-animate=" animated fadeIn" data-toggle="tooltip" data-original-title="copy" data-placement="top"><i class="fa fa-copy text-dark"></i></a><span id="saddrspan" data-toggle="tooltip1" data-placement="left"  title="copied"><input type="text" value="{{waddr?.walletaddr}}" id="saddrteletext" style="display:none;"></span>
+                        </div>
+                         <div class="pull-right">
+                                        <button type="submit" class="btn btn-primary btn-corner right15"><i class="fa fa-check"></i> Update</button>
+                                        <button type="button" class="btn btn-default btn-corner"><i class="fa fa-times"></i></button>
+                                    </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
+</div>

@@ -1,0 +1,752 @@
+<div>
+ 
+<app-topmenu></app-topmenu>
+</div>
+    <!-- ======================================= 
+    ==Start main container-fluid section==  
+    =======================================-->
+  <section class="main-header demo1 " id="main">
+
+    <div class="home-cont hbg1" >
+      
+      <div class="container">
+        <div class="row">
+           <div class=" col-xl-12 col-lg-12 col-md-12 col-sm-12" style="text-align:center;">
+            <div class="main-header-sub " >
+
+               <h1 id="tokensale">Token Sale</h1>
+
+             </div>
+           </div>
+
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            
+            <div class="main-header-sub sub " >
+                
+              <div class="content-text" style="text-align:left;">
+               
+                
+
+            <div class="process col-md-6 col-xs-12 col-lg-6  col-sm-12 chartfont  repeat">
+
+              <h2> Distribution of Tokens</h2>
+              <div class=" col-md-12 col-xs-12 col-lg-12 col-sm-12 c1">
+             <img src="./assets/data/icons/bar.jpg" class="chart1" alt="">
+              </div>
+              <div class=" col-md-12 col-xs-12 col-lg-12 col-sm-12 c1">
+            <ul    >
+              <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;ICO Campaign - 40%</span></p>
+              </li>
+               <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;Design New Furniture Product Range - 25%</span></p>
+              </li>
+              <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;E-commerce website Development - 25%</span></p>
+              </li>
+               <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;Setup warehouse for products - 10%</span></p>
+              </li>
+              <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;Marketing and sales team - 10%</span></p>
+              </li>
+               
+            </ul>
+          </div>
+
+              </div>
+
+               <div class="process col-md-6 col-xs-12 col-lg-6  col-sm-12 chartfont repeat ">
+              <h2> Distribution of Funds</h2>
+               <div class=" col-md-12 col-xs-12 col-lg-12 col-sm-12 c2">
+            <img src="./assets/data/icons/pie.png" class="chart2" alt="">
+               </div>
+              <div class=" col-md-12 col-xs-12 col-lg-12 col-sm-12 c2">
+             <ul    >
+              <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;ICO Campaign - 4000</span></p>
+              </li>
+               <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;Design New Furniture Product Range - 5000</span></p>
+              </li>
+               <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;E-Commerce Website Development  - 100000</span></p>
+              </li>
+              <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;Setup Warehouse for Products - 40000</span></p>
+              </li>
+               <li>
+                <p><i class="fa fa-check"></i><span>&nbsp;&nbsp;Marketing and Sales Team  - 500000</span></p>
+              </li>
+              
+               
+            </ul>
+          </div>
+
+              </div>
+
+               
+               
+                
+
+              </div>
+              
+            </div>
+
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div class="current-ico-bouns buttons">
+                  <div class="bouns-progress text-center">
+                   <!--<a href="{{baseurl}}/assets/data/home/_whitepaper_.pdf" target="_blank" class="special-btn text-center">Whitepaper</a>-->
+                    <a href="#" target="_blank" class="special-btn text-center">Whitepaper</a>
+                  </div>
+                </div>
+            </div>
+          
+        </div>
+          
+          <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12" style="margin-top:center;">
+            <div class="counter-down" >
+
+              <div class="content">
+                <div class="conuter-header">
+                  <h3 class="text-center">TOKEN SALE ENDS IN</h3>
+
+
+                </div>
+                <div class="counterdown-content">
+                 <div class="clock"></div>
+               
+                 <div style="text-align:left;" class="list-inline">
+                   
+                            <table cellspacing="10">
+                              <tr>
+                                <td style="text-align: right;">
+                            <h4><span>Token Name: &nbsp;&nbsp;</span></h4>
+                          </td> <td><h4>{{icodetail?.tn}}</h4></td>
+                        </tr>
+                         <tr>
+                           <td style="text-align: right;">  <h4><span>Token Symbol:&nbsp;&nbsp;</span></h4>
+                          </td> <td><h4>{{icodetail?.ts}}</h4></td>
+                        </tr>
+                         
+                            <tr>
+                             <td style="text-align: right;"> <h4><span>Token Price at Pre-Sale:&nbsp;&nbsp;</span></h4>
+                          </td> <td><h4>  {{icodetail?.rate}}</h4></td>
+                           </tr>
+                            <tr>
+                             <td style="text-align: right;"> <h4><span>Pre ICO Start Date:&nbsp;&nbsp;</span></h4>
+                          </td> <td><h4> {{icodetail?.preicostartdate}}</h4></td>
+                           </tr>
+                            <tr>
+                             <td style="text-align: right;"> <h4><span>Pre ICO End Date:&nbsp;&nbsp;</span></h4>
+                          </td> <td><h4> {{icodetail?.preicoenddate}}</h4></td>
+                           </tr>
+                            <tr>
+                             <td style="text-align: right;"> <h4><span>Accepted Payment Type:&nbsp;&nbsp;</span></h4>
+                          </td> <td><h4> ETH</h4></td>
+                           </tr>
+                            <tr>
+                             <td style="text-align: right;"> <h4><span>Total Token Supply:&nbsp;&nbsp;</span></h4>
+                          </td> <td><h4> {{icodetail?.totalsupply}}</h4></td>
+                           </tr>
+                           
+                           
+                            
+                          </table>
+                  
+                  </div>
+                <div class="ico-progress">
+                   
+                      
+                       <!-- skill strength -->
+                       <div class="current-progress">
+                          <div class="progress-bar has-gradient" style="width: 25%;"></div>
+                       </div>
+                       <span class="pull-left">Softcap: {{icodetail?.softcap}} C</span>
+                       <span class="pull-right">Hardcap: {{icodetail?.hardcap}} C</span>
+                    </div>
+                  
+                    <div class="buy-tokens-wrapper text-center mt30 o-hidden">
+                      <a href="{{baseurl}}/dashboard" class="buy-tokens has-gradient">Buy Craft Tokens</a>
+                    </div><br><br>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hbg"></div>
+      </div>
+    
+    
+ </section>
+
+   <section class="about rmbg2" style="padding-bottom:0" id="about">
+
+    <div class="tokensale" >
+      
+      <div class="container animatedParent">
+        <div class="row">
+
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12  repeat">
+              <div class="content-text processleft col-md-12 col-lg-12 col-xl-12" style="text-align:left;">
+                <h1>What is Craftmelon all about?</h1>
+                 <br>
+                  <p>The crafts of India are diverse, rich in history and religion. The craft of each state in India reflect the influence of different empires. Throughout centuries, crafts have been embedded as a culture and tradition within Indians.</p>
+                  <br>
+                  <p>Craftmelon offers a unique blend of contemporary, urbane, stylish, furniture with a celebration of Indian flavour. Craftmelon furniture designs are not only functional but also exemplify a deep aesthetic sense that will add character to every home. Every furniture is personally handcrafted by trained craftsman and artisans who ensure the perfect finish and quality that is worthy for household.</p>
+                  <br>
+                  <p>The traditions of Indian arts and crafts are rooted deeply in the lap of history. There are more than 600 plus art form in India, Craftmelon wants to fuse these art form to the contemporary design and give a new modern look to these art forms.
+                  Our collection of exclusive designs are personally designed by in house designers to ensure the furniture uses the art form which
+                  fits every house hold.</p>
+                   <br>
+                  <p>No doubt its a reality that our age-old traditions are dying in this world of fast-paced development. Artisans pertaining to these art and craft forms are also in parallel facing an uphill task to retain them. Much less ubiquitous is the understanding, the backing and the encouragement required to ensure that such magic is not lost to future generations through neglect and apathy. This is a real concern as the march towards modernity continues. It is the spur for initiatives such as those pursued with fervor by CraftMelon.</p>
+                   <br>
+
+              </div>
+            
+          </div>
+          
+          
+        </div>
+      </div>
+    
+      </div>
+   </section> 
+
+<section>
+
+    <div class="cryptovideos " >
+      
+      <div class="container animatedParent">
+        <div class="row">
+           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+              <div class="content-text" style="text-align:center;">
+                <h1>How to get started</h1>
+                
+              </div>
+            
+
+          </div>
+          
+
+
+       
+         <div class="intro-wrapper has-gradient o-hidden col-xl-12 col-lg-12 col-md-12 col-sm-12 gradopq repeat">
+            <div class="single-info-item col-md-4 col-xs-12">        
+                    <div class="info-icon">
+                        <img src="./assets/data/icons/signup.png" class="center-block" alt="">
+                    </div>
+                    <div class="info-text">
+                        <h3>Create new account - Sign up</h3>
+                       
+                    </div>
+                </div>
+                <div class="single-info-item col-md-4 col-xs-12">        
+                    <div class="info-icon">
+                        <img src="./assets/data/icons/padlock.png" class="center-block" alt="">
+                    </div>
+                    <div class="info-text">
+                        <h3>Fill your existing wallet address</h3>
+                        
+                    </div>
+                </div>
+
+                <div class="single-info-item col-md-4 col-xs-12">        
+                    <div class="info-icon">
+                        <img src="./assets/data/icons/i2.png" class="center-block" alt="">
+                    </div>
+                    <div class="info-text">
+                        <h3>Start buying tokens</h3>
+                       
+                    </div>
+                </div>
+
+                
+              </div> 
+          
+        </div>
+      </div>
+    
+      </div>
+   </section>
+
+   <section class="roadmap rmbg" style="padding-bottom:0" id="roadmap">
+     <div class="content-text rdmap" style="text-align:center;">
+                <h1>Craftmelon Roadmap</h1>
+      </div>
+      <div class="container animatedParent">
+            <div class="row">
+                <div class="timeline-split">
+                    <div class="col-xl-12 col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 repeat">
+                        <div class="timeline section-box-margin">
+                            <div class="block block-left">
+                               <h3>September 2018</h3>
+                               <span></span>
+                               <p>Campaign ends</p>
+                               <p>Create new product design team</p>
+                            </div>
+
+                            <div class="block block-right mt-30">
+                               <h3>October 2018</h3>
+                               <span></span>
+                               <p>Design new art furniture product range</p>
+                               <p>Hire new artist</p>
+                            </div>
+
+                            <div class="block block-left mt-30">
+                               <h3>December 2018</h3>
+                               <span></span>
+                               <p>New portfolio catalog ready</p>
+                               <p>Design a e-commerce website</p>
+                               <p>New warehouse for the products</p>
+                            </div>
+
+                            <div class="block block-right mt-30">
+                               <h3>Feburary 2019</h3>
+                               <span></span>
+                               <p>Launch of new e-commerce website</p>
+                            </div>
+                            <div class="block block-right mt-30">
+                               <h3>March 2019</h3>
+                               <span></span>
+                               <p>Marketing of new website</p>
+                            </div>
+                            <div class="pspace">
+                               
+                            </div>
+                             <div class="pspace">
+                               
+                            </div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+    
+     
+    </section>
+
+    <section class="roadmap rmbg1" style="padding-bottom:0" id="roadmap">
+     <div class="content-text" style="text-align:center;" id="team">
+                <h1>Meetup Awesome Team</h1>
+      </div>
+      <div class="container animatedParent">
+        <div class="row repeat">
+          
+          <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12  col-xs-12 teamalign">
+                    <div class="team-member ">
+                        <div class="team-img">
+                            <img class="img-responsive center-block" src="./assets/data/team/person1.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Bhanu Prakash R</h3>
+                        </div>
+                        <p class="mb20">Founder</p>
+                        
+                        <ul class="social-icons list-inline list-unstyled">
+                            <li><a href="https://www.facebook.com/bhanuprakash.ramalingaswamy" target="_blank"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="https://twitter.com/Bhanu_prakashR"  target="_blank"data-toggle="tooltip" data-placement="bottom" title="@bhanuprakashr"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+                            
+                            <li><a href="https://www.linkedin.com/in/bhanuprakashr/" target="_blank"><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><span id="banuspan" data-toggle="tooltip1" data-placement="bottom"  title="copied"><a href="https://t.me/Bhanu_prakashR" target="_blank"id="banuteletool" data-toggle="tooltip" data-placement="bottom"  title="@Bhanu_prakashR"><i class="fa fa-telegram icon-bordered icon-primary icon-xs"></i></a><input type="text" value="@Bhanu_prakashR" id="banuteletext" style="display:none;"></span></li>
+                        </ul>
+                      
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12  col-xs-12 teamalign">
+                    <div class="team-member ">
+                        <div class="team-img">
+                            <img class="img-responsive center-block" src="./assets/data/team/person2.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Vinod Joshi</h3>
+                        </div>
+                        <p class="mb20">Design Head</p>
+                        <ul class="social-icons list-inline list-unstyled">
+                            <li><a href="#"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+                           
+                            <li><a href="#"><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="#"><i class="fa fa-telegram icon-bordered icon-primary icon-xs"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12  col-xs-12 teamalign">
+                    <div class="team-member ">
+                        <div class="team-img">
+                            <img class="img-responsive center-block" src="./assets/data/team/person3.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Promod Joshi</h3>
+                        </div>
+                        <p class="mb20">Production Head</p>
+                        <ul class="social-icons list-inline list-unstyled">
+                            <li><a href="#"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+                            
+                            <li><a href="#"><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="#"><i class="fa fa-telegram icon-bordered icon-primary icon-xs"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12  col-xs-12 teamalign">
+                    <div class="team-member ">
+                        <div class="team-img">
+                           <img class="img-responsive center-block" src="./assets/data/team/person4.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Sathya Shankar</h3>
+                        </div>
+                        <p class="mb20">Investor</p>
+                        <ul class="social-icons list-inline list-unstyled">
+                            <li><a href="https://www.facebook.com/sathya.shankar3" target="_blank"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="https://twitter.com/NimmaSathya"  target="_blank"data-toggle="tooltip" data-placement="bottom" title="@NimmaSathya"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+                           
+                            <li><a href="https://www.linkedin.com/in/sathyashankar/"target="_blank" ><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><span id="sathyaspan" data-toggle="tooltip1" data-placement="bottom"  title="copied"><a href="https://t.me/sathyashankar" target="_blank" id="sathyateletool" data-toggle="tooltip" data-placement="bottom"  title="@sathyashankar"><i class="fa fa-telegram icon-bordered icon-primary icon-xs"></i></a><input type="text" value="@sathyashankar" id="sathyateletext" style="display:none;"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12  col-xs-12 teamalign">
+                    <div class="team-member ">
+                        <div class="team-img">
+                           <img class="img-responsive center-block" src="./assets/data/team/person5.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Prashanth N</h3>
+                        </div>
+                        <p class="mb20">Investor</p>
+                        <ul class="social-icons list-inline list-unstyled">
+                            <li><a href="https://www.facebook.com/prashanthn185" target="_blank"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="https://twitter.com/prash185" target="_blank" data-toggle="tooltip" data-placement="bottom" title="@prash185"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+                            
+                            <li><a href="https://www.linkedin.com/in/prashanthn185/" target="_blank"><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><span id="prashspan" data-toggle="tooltip1" data-placement="bottom"  title="copied"><a href="https://t.me/nprashantha" target="_blank" id="prashteletool" data-toggle="tooltip" data-placement="bottom"  title="@nprashantha"><i class="fa fa-telegram icon-bordered icon-primary icon-xs"></i></a><input type="text" value="@nprashantha" id="prashteletext" style="display:none;"></span></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12  col-xs-12 teamalign">
+                    <div class="team-member ">
+                        <div class="team-img">
+                           <img class="img-responsive center-block" src="./assets/data/team/person6.png" alt="">
+                        </div>
+                        <div class="team-info">
+                            <h3>Baburao Kalekar</h3>
+                        </div>
+                        <p class="mb20">Investor</p>
+                        <ul class="social-icons list-inline list-unstyled">
+                            <li><a href="https://www.facebook.com/baburao.kalekar" target="_blank"><i class="fa fa-facebook icon-bordered icon-primary icon-xs"></i></a></li>
+                            <li><a href="https://twitter.com/babukalekar"  target="_blank" data-toggle="tooltip" data-placement="bottom" title="@babukalekar"><i class="fa fa-twitter icon-bordered icon-primary icon-xs"></i></a></li>
+                            
+                            <li><a href="https://www.linkedin.com/in/baburao-kalekar-85814726/" target="_blank"><i class="fa fa-linkedin icon-bordered icon-primary icon-xs"></i></a></li>
+                           <li><span id="babuspan" data-toggle="tooltip1" data-placement="bottom"  title="copied"><a href="https://t.me/babukalekar" target="_blank" id="babuteletool" data-toggle="tooltip" data-placement="bottom"  title="@babukalekar"><i class="fa fa-telegram icon-bordered icon-primary icon-xs"></i></a><input type="text" value="@babukalekar" id="babuteletext" style="display:none;"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            
+        </div>
+      </div>
+    </section>
+ <section class="money-exchange bg-shape-bot1 hh" id="video">
+
+ 
+     
+  <div class="container">
+ 
+   <div class="row">
+     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12  col-xs-12">
+       <div class="content-text services" style="text-align:center;">
+                <h1>How we do it</h1>
+      </div>
+      
+  <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4 " >
+<div class="g1">   
+  <img src="http://pyrupay.com/ico/token/images/1.gif" class="img-responsive media_block img-fit"> 
+  <div class="agile-dish-caption">
+    <h3>Ideation & Sketching</h3>
+    
+  </div>
+  </div>
+  
+  </div>
+  <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4">
+  <div class=" g1">    
+  <img src="http://pyrupay.com/ico/token/images/2.gif" class="img-responsive media_block img-fit"> 
+<div class="agile-dish-caption">
+    <h3>Digitization of the Design</h3>
+    
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4">
+  <div class=" g1">    
+  <img src="http://pyrupay.com/ico/token/images/3.gif" class="img-responsive media_block img-fit"> 
+  <div class="agile-dish-caption">
+    <h3> Design Stenciling</h3>
+    
+  </div>
+  </div>
+  </div>
+   
+   
+  <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4">
+  <div class="g1">    
+  <img src="http://pyrupay.com/ico/token/images/4.gif" class="img-responsive media_block img-fit"> 
+  <div class="agile-dish-caption">
+    <h3>Wood Components Cutting</h3>
+    
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4">
+  <div class=" g1">    
+  <img src="http://pyrupay.com/ico/token/images/5.gif" class="img-responsive media_block img-fit"> 
+  <div class="agile-dish-caption">
+    <h3>Inlaying the Design Components</h3>
+    
+  </div>
+  </div>
+  </div>
+  <div class="col-md-4 col-sm-12 col-lg-4 col-xl-4">
+  <div class=" g1">    
+  <img src="http://pyrupay.com/ico/token/images/6.gif" class="img-responsive media_block img-fit"> 
+  <div class="agile-dish-caption">
+    <h3>Cleaning & Polishing</h3>
+    
+  
+  </div>
+    </div>
+     </div>
+     
+   </div>
+  </div>
+ </div>
+  
+  <!-- //Services -->
+
+ 
+  
+  </section>
+
+ 
+<section class="money-exchange darkbg" id="faq">
+
+<div class="container">
+          <div class="row ">
+<!-- Accordion START -->
+
+      <div class="col-xl-12 col-md-12 col-lg-12 col-sm-12 col-xs-12">
+
+         <div class="content-text" style="text-align:center;" id="team">
+                <h1>FAQ</h1>
+      </div>  
+
+          <div class="panel-group transparent" id="accordion-3" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne3">
+                      <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion-3" href="#collapseOne-3" aria-expanded="true" aria-controls="collapseOne-3">
+                              <i class='fa fa-check'></i>What is the overview of token sale?
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseOne-3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne3">
+                      <div class="panel-body">
+                         <p> Token could be considered as stock before the company being listed up on the stock market, Except for the rights to exercise like shareholders, instead those who bought tokens could get various benefits as return because their early purchase of tokens support our business.</p>
+                         <br>
+                          <p>Token is named as Craftmelon Coin.</p>
+                          <br>
+                          <p>Token sale begins at 14.00(IST) on August 15th 2018 and ends 14.00(IST) on 15th September 2018</p>
+                          <br>
+                          <p>Details of the procedure for determining the token sale and the total number of issuance are as follows.</p>
+                          <br>
+                          <p>Participants of token sale will acquire 1 Craftmelon token for purchase equivalent to 0.2 USD.</p>
+                          <br>
+                          <p> 1 Craftmelon Coin = 0.2 USD Payment currency is through Ethereum.</p>
+                          <br>
+                          <p>This is the major cryptocurrency circulated
+                          in the market, You could buy this coins and then change to
+                          Craftmelon coin for operation.</p>
+                          <br>
+
+                          <p>The maximum number of selling issue for token sale is 500,000,000 tokens.</p>
+                          <br>
+                      </div>
+                  </div>
+              </div>
+             
+             
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree3">
+                      <h4 class="panel-title">
+                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion-3" href="#collapseThree-3" aria-expanded="false" aria-controls="collapseThree-3">
+                              <i class='fa fa-check'></i> What is Craftmelon Strategy?
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseThree-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree3">
+                      <div class="panel-body">
+                          <p>India has more than 1000 different type of art form and Handicrafts and many in these are almost dying. Craftmelon wants to use these art form and wanted to give modern look to it, So that it could be used in modern homes. We wanted fuse these art form to the contemporary furniture design.</p>
+                          <br>
+                          <p>By doing this we are supporting the artisans for their live hood and also trying to retrieve the lost art form. These artisans will be having work only during the festivals seasons, as these arts are gifted only during festivals. We at Craftmelon wanted to employee these artsian so that they have work year long and also there job safety.</p>
+                          <br>
+                          <p>Craftmelon encourages youngster who are interested to pursue their career in art furniture to learn them and we also wanted to ensure that they have a job with us to form their career.</p>
+                          <br>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFour3">
+                      <h4 class="panel-title">
+                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion-3" href="#collapseFour-3" aria-expanded="false" aria-controls="collapseFour-3">
+                              <i class='fa fa-check'></i> How Craftmelon on blockchain work?
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseFour-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour3">
+                      <div class="panel-body">
+                          <p>Craftmelon will have a unique ID issued for all the products and art work. </p>
+                          <br>
+                          <p>
+                          These details will be updated in the blockchain network . On doing this we will be able to track the product in blockchain network. This would also help in knowing the genuinity of the product.</p>
+                        <br>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingFive3">
+                      <h4 class="panel-title">
+                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion-3" href="#collapseFive-3" aria-expanded="false" aria-controls="collapseFive-3">
+                              <i class='fa fa-check'></i> Social Media Links
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseFive-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo3">
+                      <div class="panel-body">
+                          <p>Twitter: https://twitter.com/Craftmelon2 </p>
+                          <p>Website: http://craftmelon.com</p>
+                          <p>Facebook: http://facebook.com/craftmelon</p>
+                          <p>Youtube: http://youtube.com/craftmelon</p>
+                          <p>Telegram: @craftmelon</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingSix3">
+                      <h4 class="panel-title">
+                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion-3" href="#collapseSix-3" aria-expanded="false" aria-controls="collapseSix-3">
+                              <i class='fa fa-check'></i> Where is your company located?
+                          </a>
+                      </h4>
+                  </div>
+                  <div id="collapseSix-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree3">
+                      <div class="panel-body">
+                          <p>Helios Decor Pvt Ltd</p>
+
+                          <p>39, 2nd Floor , 1st Stage, 1st Phase, 6th cross, 12th main,Gokula Extension, Mathikere, Bangalore , Karnataka, India – 560054</p>
+
+                          <p>Phone – +91 – 9686862342</p>
+
+                          <p>Email – info@craftmelon.com</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+
+       
+       
+      <!-- Accordion END -->
+    </div>
+  </div>
+</section>
+  <!-- ======================================= 
+    ==End main header section==  
+    =======================================-->
+ <section class="main-footer footer-style-two text-center" id="contact">
+        <!--Widgets Section-->
+        <div class="widgets-section">
+            <div class="container">
+                 
+                <div class="row clearfix">
+                   <!--Footer Column-->
+                   <div class="footer-column col-md-3 col-lg-4 col-sm-12 col-xs-12">
+                      <div class="footer-widget about-widget">
+                         <h3 class="has-line-center">About Us</h3>
+                         <div class="widget-content">
+                            <div class="text">Wood Inlay Art of Mysuru is a slice of local heritage and portrays India’s rich heritage which is a product of history and geography embellished with artisans’ dexterity.</div>
+                               <ul class="social-links">
+                                  <li><a href="{{hdetail?.facebk}}"><span class="fa fa-facebook-f"></span></a></li>
+                                  <li><a href="{{hdetail?.twitter}}"><span class="fa fa-twitter"></span></a></li>
+                                 
+                                  <li><a href="{{hdetail?.ln}}"><span class="fa fa-linkedin"></span></a></li>
+                                 <li><a href="{{hdetail?.gplus}}"><span class="fa fa-youtube"></span></a></li>
+                                  <li><span id="craftspan" data-toggle="tooltip1" data-placement="bottom"  title="copied"><a href=" https://t.me/joinchat/AiStmxBGst2mkFQC69WBvg" id="craftteletool" data-toggle="tooltip" data-placement="right"  title="@craftmelon"><i class="fa fa-telegram"></i></a><input type="text" value="@craftmelon" id="craftteletext" style="display:none;"></span></li>
+                               </ul>
+                             </div>
+                         </div>
+                     </div><!--End Footer Column-->
+                      <!--Footer Column-->
+                     <div class="footer-column col-md-3 col-lg-4 col-sm-12 col-xs-12">
+                         <div class="footer-widget contact-widget">
+                             <h3 class="has-line-center">Contact Us</h3>
+                             <div class="widget-content">
+                               <div class="col-md-2 col-sm-2 col-xs-12">
+                                   
+                              </div>
+                              <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                 <a href="{{hdetail?.cus}}"><img src="./assets/data/icons/googlemap.png" style="width:100px; height:100px;" alt=""></a>
+                               </div>
+                               <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                                    <img src="./assets/data/icons/qr.png" style="width:80px; height:80px; margin-top:10px" alt="">
+                              </div>
+                                <div class="col-md-2 col-sm-2 col-xs-12">
+                                   
+                              </div>
+                             </div>
+                             
+                         </div>
+                     </div><!--End Footer Column-->
+
+                      <!--Footer Column-->
+                     <div class="footer-column col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                         <div class="footer-widget newsletter-widget">
+                             <h3 class="has-line-center">Reach us at</h3>
+                             <div class="widget-content">
+                               <div class="text">Please let us know if you have a question, want to leave a comment, or would like further information about Craftmelon. </div>
+                                 <div class="newsletter-form">
+                                     <form method="post" >
+                                         <div class="form-group">
+                                          <div class="nav-linkh btnstblk btn-outline" style="padding:8px;  ">
+                                             <a style="color:#ffffff; font-size: 16px; font-style: italic;" href="mailto:craftmeloncoin@gmail.com"><i class="fa fa-envelope"></i>&nbsp;&nbsp;Send us an email</a>
+                                          </div>
+                                         </div>
+                                     </form>
+                                 </div>
+                             </div>
+                         </div>
+                     </div><!--End Footer Column-->
+                     
+                    
+                     
+                  </div>
+              </div>
+          </div>
+          <br /> <br />
+</section>
+<script src="assets/js/particles.js"></script>
+
+<script src="assets/js/custom.js"></script>
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+
+</script>

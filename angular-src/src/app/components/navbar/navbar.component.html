@@ -1,0 +1,50 @@
+<div class='page-topbar '>
+ <div class='quick-area'>
+<nav class="info-menu navbar navbar-expand-md navbar-dark ">
+   <span><img src="./assets/images/logo-folded.png" class="ico-icon-o" alt=""> </span>
+  <a class="navbar-brand b1" href="{{baseurl}}">Craft Melon</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse topmenubk1" id="navbarsExampleDefault">
+   
+
+    <ul class="nav navbar-nav navbar-right info-menu">
+       <!-- <li class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" href="/">Home</a>
+      </li> -->
+      <li *ngIf="accountService.isUserLoggedin()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link"  href="{{baseurl}}/profile" >Profile</a>
+      </li>
+
+      <li *ngIf="accountService.isUserLoggedin()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link"  href="{{baseurl}}/settings" >Settings</a>
+      </li>
+
+      <li *ngIf="accountService.isUserLoggedin()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" href="{{baseurl}}/dashboard">Dashboard</a>
+      </li>
+
+      <li *ngIf="accountService.isUserLoggedin()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" href="{{baseurl}}/transaction">Transaction</a>
+      </li>
+
+
+
+      <li *ngIf="!accountService.isUserLoggedin()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" href="{{baseurl}}/login">Login</a>
+      </li>
+      <li *ngIf="!accountService.isUserLoggedin()" class="nav-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a class="nav-link" href="{{baseurl}}/register">Register</a>
+      </li>
+      <li *ngIf="accountService.isUserLoggedin()" class="nav-item">
+        <a class="nav-link" (click)="onLogout()" style="cursor: pointer;">Logout</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+</div>
+</div>
